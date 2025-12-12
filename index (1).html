@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SHIMS-GH — School Health Information Management System</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-grid">
+      <div class="brand">
+        <img src="images/logo.png" alt="SHIMS-GH logo" class="logo" />
+        <div>
+          <h1>SHIMS-GH</h1>
+          <p class="tagline">Digital health platform for Sickle Cell Disease in SHS boarding schools</p>
+        </div>
+      </div>
+      <nav class="nav">
+        <a href="#overview">Overview</a>
+        <a href="#modules">Modules</a>
+        <a href="#features">Features</a>
+        <a href="#profiles">Profiles</a>
+        <a href="#monitoring">Monitoring</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="hero" class="hero container">
+      <h2>Reduce sickle cell crises through early detection & rapid response</h2>
+      <p class="lead">SHIMS-GH integrates student health profiles, daily monitoring, telemedicine, crisis reporting, and emergency preparedness tailored for SHS boarding schools.</p>
+      <p class="cta-row">
+        <a class="btn primary" href="#modules">Explore modules</a>
+        <a class="btn" href="#profiles">View example profiles</a>
+      </p>
+    </section>
+
+    <section id="overview" class="container section card">
+      <h3>What is SHIMS-GH?</h3>
+      <p>SHIMS-GH (School Health Information Management System for SCD) is a digital platform integrating student health profiles, daily monitoring, telemedicine, crisis reporting, and emergency preparedness tailored to SHS boarding schools. Its goal is to reduce the frequency and severity of sickle cell crises by enabling early detection, structured crisis management, and improved collaboration between students, staff, parents, and healthcare providers. fileciteturn0file0</p>
+    </section>
+
+    <section id="modules" class="container section">
+      <h3>Intervention design — 4 integrated modules</h3>
+      <div class="grid-3">
+        <article class="module-card">
+          <h4>1. Digital Student Health Profiles</h4>
+          <ul>
+            <li>Diagnosis & genotype</li>
+            <li>Trigger & crisis history</li>
+            <li>Medication schedule</li>
+            <li>Emergency contacts & consent controls</li>
+          </ul>
+        </article>
+
+        <article class="module-card">
+          <h4>2. Daily Monitoring & Early Warning</h4>
+          <p>Students or nurses log pain, hydration, fatigue, temperature, exposure to cold, and infection symptoms. The system produces a risk status (high / moderate / low) to enable early action.</p>
+        </article>
+
+        <article class="module-card">
+          <h4>3. Emergency Preparedness</h4>
+          <p>Night-time crisis protocol, emergency contact alerts, rapid parent/facility communication, and supply checklists (ORS, analgesics, warm packs).</p>
+        </article>
+
+        <article class="module-card">
+          <h4>4. Telemedicine Integration</h4>
+          <p>Nurse-to-doctor teleconsultation, asynchronous messaging, and referral communication channels to ensure rapid clinical oversight.</p>
+        </article>
+
+        <article class="module-card">
+          <h4>Personalised (Individual)</h4>
+          <ul>
+            <li>Crisis monitoring dashboard</li>
+            <li>Personalised alerts for hydration, medication, rest</li>
+            <li>Student-specific risk scoring</li>
+            <li>Encrypted records & confidential telemedicine</li>
+          </ul>
+        </article>
+
+        <article class="module-card">
+          <h4>Population (School / System)</h4>
+          <ul>
+            <li>School-wide emergency readiness tools</li>
+            <li>Trend dashboards for administrators</li>
+            <li>Training modules for staff</li>
+            <li>Anonymous reporting & aggregated heat maps</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="features" class="container section card">
+      <h3>Key features</h3>
+      <ul class="features-list">
+        <li><strong>Early warning:</strong> automated risk scoring from daily logs</li>
+        <li><strong>Crisis flow:</strong> structured night-time protocol & rapid alerts</li>
+        <li><strong>Telemedicine:</strong> synchronous and asynchronous clinician access</li>
+        <li><strong>Data privacy:</strong> consent-controlled visibility & encrypted records</li>
+        <li><strong>Preparedness checklists:</strong> supply and procedure guidance</li>
+      </ul>
+    </section>
+
+    <section id="profiles" class="container section">
+      <h3>Sample student profiles (demo)</h3>
+      <div id="profiles-grid" class="grid-3"></div>
+      <p class="muted">This area uses <code>data/sample_profiles.json</code> to render profiles client-side (demo data).</p>
+    </section>
+
+    <!-- Daily Monitoring Section -->
+    <section id="monitoring" class="container section card">
+      <h3>Daily Monitoring — Log health check</h3>
+      <p class="muted">Use this demo form to log a student's daily status. Submissions are stored locally in your browser for demo purposes only.</p>
+
+      <form id="monitoring-form" class="monitor-form" autocomplete="off">
+        <div class="form-row">
+          <label for="studentId">Student (ID or name)</label>
+          <input id="studentId" name="studentId" placeholder="e.g., s001 or Ama Mensah" required />
+        </div>
+
+        <div class="form-row">
+          <label for="pain">Pain level (0 — no pain, 10 — worst)</label>
+          <input id="pain" name="pain" type="number" min="0" max="10" value="2" required />
+        </div>
+
+        <div class="form-row">
+          <label>Hydration</label>
+          <select id="hydration" name="hydration">
+            <option value="good">Good</option>
+            <option value="moderate">Moderate</option>
+            <option value="poor">Poor</option>
+          </select>
+        </div>
+
+        <div class="form-row">
+          <label>Fatigue</label>
+          <select id="fatigue" name="fatigue">
+            <option value="low">Low</option>
+            <option value="moderate">Moderate</option>
+            <option value="high">High</option>
+          </select>
+        </div>
+
+        <div class="form-row">
+          <label for="temperature">Temperature (°C)</label>
+          <input id="temperature" name="temperature" type="number" step="0.1" placeholder="e.g., 37.0" value="36.7" required />
+        </div>
+
+        <div class="form-row checkbox-row">
+          <label><input type="checkbox" id="exposure" name="exposure" /> Recent exposure to cold / environmental trigger</label>
+        </div>
+
+        <div class="form-row">
+          <label>Infection symptoms</label>
+          <div class="symptoms">
+            <label><input type="checkbox" name="symptoms" value="fever" /> Fever</label>
+            <label><input type="checkbox" name="symptoms" value="cough" /> Cough</label>
+            <label><input type="checkbox" name="symptoms" value="sore_throat" /> Sore throat</label>
+            <label><input type="checkbox" name="symptoms" value="diarrhoea" /> Diarrhoea</label>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <label for="notes">Notes (optional)</label>
+          <textarea id="notes" name="notes" rows="2" placeholder="Additional observations..."></textarea>
+        </div>
+
+        <div class="form-row">
+          <button class="btn primary" type="submit">Submit log</button>
+          <button id="clear-logs" class="btn" type="button">Clear demo logs</button>
+        </div>
+      </form>
+
+      <hr />
+
+      <div id="monitoring-results">
+        <h4>Recent submissions (demo)</h4>
+        <div id="submissions-list" class="grid-3"></div>
+      </div>
+    </section>
+
+    <section id="contact" class="container section card">
+      <h3>Contact & next steps</h3>
+      <p>Interested in piloting SHIMS-GH at a school? Contact the project lead at <a href="mailto:contact@example.org">contact@example.org</a> or use the project repository to raise issues and feature requests.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>SHIMS-GH — Designed for SHS boarding schools • (c) 2025</small>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

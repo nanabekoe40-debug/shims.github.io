@@ -1,0 +1,29 @@
+[
+  {
+    "id": "s001",
+    "name": "Ama Mensah",
+    "genotype": "SS",
+    "last_crisis": "2025-11-02",
+    "medication": "Folic acid daily; analgesic PRN",
+    "risk": "Moderate",
+    "contact": "Mother — +233 24 000 0000"
+  },
+  {
+    "id": "s002",
+    "name": "Kofi Ofori",
+    "genotype": "SC",
+    "last_crisis": "2025-10-12",
+    "medication": "Hydroxyurea — Mon/Wed/Fri",
+    "risk": "Low",
+    "contact": "Father — +233 24 111 1111"
+  },
+  {
+    "id": "s003",
+    "name": "Esi Boateng",
+    "genotype": "SS",
+    "last_crisis": "2025-12-01",
+    "medication": "Analgesic PRN",
+    "risk": "High",
+    "contact": "Guardian — +233 24 222 2222"
+  }
+]
